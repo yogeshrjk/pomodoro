@@ -11,15 +11,14 @@ let state = true;
 let totalSeconds = 15 * 60;
 let count = 15;
 const scroll = (event) => {
+    scrl.play();
     if (event.deltaY < 0 && count < 120) {
       // Scrolling up
       count++;
-      scrl.play();
       totalSeconds = Number.parseInt(count) * 60;
     } else if (event.deltaY > 0 && count > 15){
       // Scrolling down
       count--;
-      scrl.play();
       totalSeconds = Number.parseInt(count) * 60;
     }
     session.innerHTML = count;
