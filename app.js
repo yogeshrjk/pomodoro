@@ -1,4 +1,5 @@
-const bells = new Audio('./sounds/bell.wav'); 
+const bells = new Audio('./bell.mp3'); 
+const scrl = new Audio('./scroll.mp3');
 const session = document.querySelector('.minutes'); 
 const getSecond = document.querySelector(".seconds");
 const startBtn = document.querySelector('.btn-start'); 
@@ -13,10 +14,12 @@ const scroll = (event) => {
     if (event.deltaY < 0 && count < 120) {
       // Scrolling up
       count++;
+      scrl.play();
       totalSeconds = Number.parseInt(count) * 60;
     } else if (event.deltaY > 0 && count > 15){
       // Scrolling down
       count--;
+      scrl.play();
       totalSeconds = Number.parseInt(count) * 60;
     }
     session.innerHTML = count;
