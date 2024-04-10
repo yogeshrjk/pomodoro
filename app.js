@@ -23,10 +23,6 @@ const scroll = (event) => {
   };
 
 window.addEventListener('wheel', scroll);
-// const sessionAmount = Number.parseInt(count.textContent);
-// let totalSeconds = count * 60;
-
-
 
 
 //app timer
@@ -37,8 +33,7 @@ const appTimer = () => {
     window.removeEventListener('wheel', scroll);
     if(state) {
       state = false;
-    //   clearInterval(myInterval);
-    const updateSeconds = () => {
+      const updateSeconds = () => {
         const minuteDiv = document.querySelector('.minutes');
         const secondDiv = document.querySelector('.seconds');
       
